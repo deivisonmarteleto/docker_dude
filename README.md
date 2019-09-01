@@ -1,4 +1,14 @@
 
+# Hello people!
+
+This project is simple, the focus is to help small internet providers run "The dude" in their operations.
+
+# This project has:
+
+- The dude 4 beta3
+- Telegram Integration
+
+
 How simple is it to deploy dude?
 ---
 
