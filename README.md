@@ -9,7 +9,7 @@ This project is simple, the focus is to help small internet providers run "The d
 - Telegram Integration
 
 
-How simple is it to deploy dude?
+# How simple is it to deploy dude?
 ---
 
     docker run --name dude \
@@ -34,7 +34,7 @@ and run it again with
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-#For pessistent mode
+# For pessistent mode
 
 docker volume create dude_data
 
@@ -43,31 +43,10 @@ docker volume create dude_data
 ---
 
 version: '3.7'
-services:
-  dude:
-    build: .
-    image: dmarteleto/docker_dude
-    container_name: dude
-    ports:
-      - "2211:2211"
-      - "2210:2210"
-      - "514:514/udp"
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ./wine:/root/.wine/:rw
-      - dude_data:/dude/:rw
-    restart: always
-    privileged: true
-
-volumes:
-    dude_data:
-       external: true
-
-
 
 ---
 
-#Telegram Integration:
+# Telegram Integration:
 To automate messages sent by a Telegram bot. The process of BOT creation in Telegram needs to be accomplished, with the ID_chat and API data it can put into production.
 
 ---
