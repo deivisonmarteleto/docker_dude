@@ -9,7 +9,7 @@ This project is simple, the focus is to help small internet providers run "The d
 - Telegram Integration
 
 
-# How simple is it to deploy dude?
+How simple is it to deploy dude?
 ---
 
     docker run --name dude \
@@ -35,15 +35,26 @@ and run it again with
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 # For pessistent mode
-
+---
 docker volume create dude_data
+git clone https://github.com/deivisonmarteleto/docker_dude.git
+cd docker_dude
+docker-compose build
+docker-compose up -d
+
+---
 
 # docker-compose.yml
 
 ---
 
 version: '3.7'
+    ports:
+      - "2211:2211"
+      - "2210:2210"
+      - "514:514/udp"
 
+NOTE: Admin and no password!
 ---
 
 # Telegram Integration:
@@ -54,5 +65,3 @@ To automate messages sent by a Telegram bot. The process of BOT creation in Tele
 c:/curl.exe --insecure https://api.telegram.org/botxxxxxxxxxxxxxxxxxxxxx/sendMessage -d chat_id=-xxxxxxx -d text="O servico [Probe.Name] no dispositivo [Device.Name] passou para o status [Service.Status] - IP=[Device.FirstAddress]"
 
 ---
-
-
