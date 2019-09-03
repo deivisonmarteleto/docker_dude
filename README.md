@@ -43,8 +43,10 @@ cd docker_dude
 docker-compose build
 docker-compose up -d
  
-cp installer/curl.exe 
- 
+cp installer/curl.exe  wine/drive_c/
+chmod +x wine/drive_c/curl.exe
+
+
 ---
 
 # docker-compose.yml
