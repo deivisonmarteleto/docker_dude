@@ -34,7 +34,7 @@ and run it again with
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-# For pessistent mode
+# For Persistent mode
 ---
 docker volume create dude_data 
 
