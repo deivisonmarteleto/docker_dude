@@ -36,15 +36,22 @@ and run it again with
 
 # For pessistent mode
 ---
-docker volume create dude_data
+docker volume create dude_data 
+
 git clone https://github.com/deivisonmarteleto/docker_dude.git
+
 cd docker_dude
 
+
 docker-compose build
-docker-compose up -d
+
+docker-compose up -d 
+
  
-cp installer/curl.exe  wine/drive_c/
-chmod +x wine/drive_c/curl.exe
+cp installer/curl.exe  wine/drive_c/ 
+
+chmod +x wine/drive_c/curl.exe 
+
 
 
 ---
