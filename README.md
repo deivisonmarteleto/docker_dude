@@ -39,9 +39,12 @@ and run it again with
 docker volume create dude_data
 git clone https://github.com/deivisonmarteleto/docker_dude.git
 cd docker_dude
+
 docker-compose build
 docker-compose up -d
-
+ 
+cp installer/curl.exe 
+ 
 ---
 
 # docker-compose.yml
