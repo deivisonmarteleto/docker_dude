@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  dude:
+    build: .
+    image: dmarteleto/docker_dude
+    container_name: dude
+    ports:
+      - "2211:2211"
+      - "2210:2210"
+      - "514:514/udp"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./wine:/root/.wine/:rw
+      - dude_data:/dude/:rw
+    restart: always
+    privileged: true
+
+volumes:
+    dude_data:
+       external: true
+
